@@ -1,4 +1,4 @@
-<a href="https://github.com/Chiss5618/monkey-airship/releases/latest/download/MonkeyAirship.dll">
+<a href="https://github.com/Chiss5618/MonkeyAirship/releases/latest/download/MonkeyAirship.dll">
     <img align="left" alt="Icon" height="90" src="CardMonkey-Icon.png">
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
@@ -9,7 +9,7 @@
 
 <p float="left">
     <img alt="Monkey Airship" width="300" height="300" src="MonkeyAirship-Icon.png"/>
-    <img alt="Monkey Airship Paragon" width="300" height="300" src="Upgrades/GodKingOfSpades-Portrait.png"/>
+    <img alt="Monkey Airship Paragon" width="300" height="300" src="Upgrades/Bloonradicator-Portrait.png"/>
 </p>
 
 This custom tower contains:
