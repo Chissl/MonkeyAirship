@@ -22,6 +22,6 @@ This custom tower contains:
 Known Bugs:
 * Airship can clip underneath bloons - This seems to be hardcoded into the game and I have no easy way to circumvent this
 
-For suggestions and feedback (especially regarding balancing and bugs), contact Chiss#5306 on discord. Yes, I am aware the code is extremely messy. 
+For suggestions and feedback (especially regarding balancing and bugs), contact Chiss#5306 on discord. 
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
