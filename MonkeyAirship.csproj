@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <RootNamespace>MonkeyAirship</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>MonkeyAirship</AssemblyName>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <Optimize>True</Optimize>
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+
+    <Import Project="..\btd6.targets" />
+
+    <ItemGroup>
+      <Compile Remove="Displays\TopPath\**" />
+      <EmbeddedResource Remove="Displays\TopPath\**" />
+      <None Remove="Displays\TopPath\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Displays\Display100.png" />
+      <None Remove="Displays\MonkeyAirshipBaseDisplayMonkeyAirship.png" />
+      <None Remove="Displays\Projectiles\ApacheLaserPulse.png" />
+      <None Remove="Displays\Projectiles\ArmourPiercingDisplay.png" />
+      <None Remove="Displays\Projectiles\PlasmaBulletDisplay.png" />
+    </ItemGroup>
+</Project>
