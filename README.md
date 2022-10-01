@@ -2,7 +2,7 @@
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
 
-<h1 align="center">Card Monkey</h1>
+<h1 align="center">Monkey Airship</h1>
 
 ### This mods adds the Monkey Airship, a powerful flying tower that obliterates bloons!
 
