@@ -1,17 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using MonkeyAirship.Displays;
-
-namespace MonkeyAirship.Upgrades.BottomPath
+﻿namespace MonkeyAirship.Upgrades.BottomPath
 
 {
     public class ImprovedEngines : ModUpgrade<MonkeyAirship>

@@ -1,24 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using System.Collections.Generic;
-using System.Linq;
-using Assets.Scripts.Models.TowerSets;
-using BTD_Mod_Helper.Api.Enums;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Unity;
-using BTD_Mod_Helper.Api;
-using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Simulation.Behaviors;
-using Assets.Scripts.Models.GenericBehaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using MonkeyAirship.Displays.Planes;
+﻿
 
 namespace MonkeyAirship.Upgrades
 {
@@ -67,7 +47,7 @@ namespace MonkeyAirship.Upgrades
 
             balloflight.GetAttackModel().weapons[0].AddBehavior(new FireFromAirUnitModel("fire"));
             var balloflightweapon = balloflight.GetAttackModel().weapons[0];
-            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Assets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
+            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             balloflightweapon.projectile.GetDamageModel().damage = 24;
             balloflightweapon.projectile.AddBehavior(new DamageModifierForTagModel("boss", "Boss", 1, 20, false, true));
             balloflightweapon.projectile.CapPierce(999999);
@@ -127,7 +107,7 @@ namespace MonkeyAirship.Upgrades
             strongairunitmodel.weapons[10].ejectX = 0;
             strongairunitmodel.weapons[10].projectile.GetDamageModel().damage = 120;
             strongairunitmodel.weapons[10].projectile.AddBehavior(new DamageModifierForTagModel("boss", "Boss", 1, 100, false, true));
-            strongairunitmodel.weapons[10].GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Assets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
+            strongairunitmodel.weapons[10].GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
             strongairunitmodel.AddWeapon(strongairunitmodel.weapons[10]);
             strongairunitmodel.weapons[11].GetDescendant<LineProjectileEmissionModel>().useTargetAsEndPoint = false;
 
@@ -195,7 +175,7 @@ namespace MonkeyAirship.Upgrades
             var bombbehavior = Game.instance.model.GetTowerFromId("MonkeyAce-030").GetAttackModel(1).Duplicate();
             var mortar500 = Game.instance.model.GetTowerFromId("MortarMonkey-500").Duplicate();
             var bomb = bombbehavior.weapons[0];
-            bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Assets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
+            bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
             bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.scale = .8f;
 
             bomb.RemoveBehavior<CheckAirUnitOverTrackModel>();

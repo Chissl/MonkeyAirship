@@ -1,8 +1,4 @@
-﻿using Assets.Scripts.Unity.Display;
-using BTD_Mod_Helper.Api.Display;
-using BTD_Mod_Helper.Extensions;
-using UnityEngine;
-using Assets.Scripts.Models.GenericBehaviors;
+﻿
 
 namespace MonkeyAirship.Displays.Planes
 {
@@ -34,7 +30,7 @@ namespace MonkeyAirship.Displays.Planes
     public class MoabPlaneDisplay : ModDisplay
     {
         public override string BaseDisplay => "bafddc9e96223c849b29709ce057e33f";
-        public override Assets.Scripts.Simulation.SMath.Vector3 PositionOffset => new(0, 100, 0);
+        public override Il2CppAssets.Scripts.Simulation.SMath.Vector3 PositionOffset => new(0, 100, 0);
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
 # if DEBUG
@@ -53,7 +49,7 @@ namespace MonkeyAirship.Displays
     public class ParagonPlaneDisplay : ModDisplay
     {
         public override string BaseDisplay => "a71703da4f9dd894e83e204d8cc74c50";
-        public override Assets.Scripts.Simulation.SMath.Vector3 PositionOffset => new(0, 100, 0);
+        public override Il2CppAssets.Scripts.Simulation.SMath.Vector3 PositionOffset => new(0, 100, 0);
         public override void ModifyDisplayNode(UnityDisplayNode node)
         {
 # if DEBUG

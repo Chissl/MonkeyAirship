@@ -1,22 +1,22 @@
 using MelonLoader;
 using BTD_Mod_Helper;
 using MonkeyAirship;
-using Assets.Scripts.Models;
-using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Simulation.Towers;
-using Assets.Scripts.Simulation.Towers.Behaviors;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu;
+using Il2CppAssets.Scripts.Models;
+using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
+using Il2CppAssets.Scripts.Simulation.Towers;
+using Il2CppAssets.Scripts.Simulation.Towers.Behaviors;
+using Il2CppAssets.Scripts.Unity;
+using Il2CppAssets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu;
 using BTD_Mod_Helper.Extensions;
 using HarmonyLib;
 using System;
 
 using ModHelperData = MonkeyAirship.ModHelperData;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack;
 
 [assembly: MelonInfo(typeof(MonkeyAirship.Main), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
@@ -58,7 +58,7 @@ namespace MonkeyAirship
             }
         }
 
-        public override void OnTowerUpgraded(Tower tower, string upgradeName, Assets.Scripts.Models.Towers.TowerModel newBaseTowerModel)
+        public override void OnTowerUpgraded(Tower tower, string upgradeName, Il2CppAssets.Scripts.Models.Towers.TowerModel newBaseTowerModel)
         {
             base.OnTowerUpgraded(tower, upgradeName, newBaseTowerModel);
 
