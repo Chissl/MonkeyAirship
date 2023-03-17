@@ -1,10 +1,9 @@
 <a href="https://github.com/Chiss5618/MonkeyAirship/releases/latest/download/MonkeyAirship.dll">
     <img align="right" alt="Download" height="75" src="https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/BloonsTD6%20Mod%20Helper/Resources/DownloadBtn.png">
 </a>
-<h1 align="center">DOES NOT WORK, WILL UPDATE WHEN I HAVE TIME </h1>
 <h1 align="center">Monkey Airship</h1>
 
-### This mods adds the Monkey Airship, a powerful flying tower that obliterates bloons!
+### This mods adds the Monkey Airship, a powerful flying tower that obliterates bloons! Updated for v35 by CommanderCat
 
 <p float="left">
     <img alt="Monkey Airship" width="300" height="300" src="MonkeyAirship-Icon.png"/>
