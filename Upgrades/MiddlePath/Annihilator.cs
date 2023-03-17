@@ -1,25 +1,6 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using UnhollowerBaseLib;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Models.Towers.Projectiles;
-using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Behaviors;
-using MonkeyAirship.Upgrades.TopPath;
-using MonkeyAirship.Upgrades.MiddlePath;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Simulation.Towers.Emissions.Behaviors;
-using Assets.Scripts.Simulation.Towers.Emissions;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using MonkeyAirship.Upgrades.BottomPath;
-using Assets.Scripts.Models.Towers.Behaviors.Abilities;
-using Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors;
+﻿
+
+
 
 namespace MonkeyAirship.Upgrades.MiddlePath
 {
@@ -82,13 +63,13 @@ namespace MonkeyAirship.Upgrades.MiddlePath
             var weaklaser = laserstrikeattack.Duplicate();
             var displaylaser = laserstrikeattack.Duplicate();
             displaylaser.GetDescendant<LineProjectileEmissionModel>().useTargetAsEndPoint = false;
-            weaklaser.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Assets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
+            weaklaser.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             
             laserstrike.attacks[0].targetProvider = new TargetStrongAirUnitModel("", false, false);
             laserstrike.attacks[0].AddBehavior(new TargetStrongAirUnitModel("", false, false));
 
             laserstrikeattack.GetAttackModel().weapons[0].projectile.GetDamageModel().damage = 120;
-            laserstrikeattack.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Assets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
+            laserstrikeattack.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
             
             laserstrike.attacks[0].weapons[0] = laserstrikeattack.GetAttackModel().weapons[0].Duplicate();
             laserstrike.attacks[0].fireWithoutTarget = false;
@@ -107,7 +88,7 @@ namespace MonkeyAirship.Upgrades.MiddlePath
             foreach (var attackairunitmodel in towerModel.GetBehaviors<AttackAirUnitModel>())
             {
                 attackairunitmodel.range += 50;
-                attackairunitmodel.weapons[0].projectile.display = new Assets.Scripts.Utils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
+                attackairunitmodel.weapons[0].projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("ceramic", "Ceramic", 1, 3, false, true));
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("fortified", "Fortified", 1, 3, false, true));
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("moabs", "Moabs", 1, 2, false, true));

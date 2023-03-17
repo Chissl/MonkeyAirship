@@ -1,13 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Behaviors;
-using MonkeyAirship.Upgrades.BottomPath;
-using MonkeyAirship.Upgrades.TopPath;
+﻿
 
 namespace MonkeyAirship.Upgrades.MiddlePath
 {

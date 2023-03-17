@@ -1,18 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors;
-using MonkeyAirship.Upgrades.TopPath;
-using MonkeyAirship.Upgrades.MiddlePath;
-using Assets.Scripts.Models.Towers.Filters;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using MonkeyAirship.Displays.Planes;
-namespace MonkeyAirship.Upgrades.BottomPath
+﻿namespace MonkeyAirship.Upgrades.BottomPath
 {
     public class Ravager : ModUpgrade<MonkeyAirship>
     {

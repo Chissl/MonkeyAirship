@@ -1,19 +1,6 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors;
-using MonkeyAirship.Upgrades.TopPath;
-using MonkeyAirship.Upgrades.MiddlePath;
-using Assets.Scripts.Models.Towers.Filters;
-using UnhollowerBaseLib;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Simulation.Towers.Emissions.Behaviors;
-using Assets.Scripts.Simulation.Towers.Emissions;
+﻿
+
+
 
 namespace MonkeyAirship.Upgrades.BottomPath
 {
@@ -62,7 +49,7 @@ namespace MonkeyAirship.Upgrades.BottomPath
                     var decamo = Game.instance.model.GetTower(TowerType.WizardMonkey, 0, 0, 3).GetWeapons()[1].Duplicate();
                     decamo.behaviors = new Il2CppReferenceArray<WeaponBehaviorModel>(new WeaponBehaviorModel[] { firefromlightplane });
                     decamo.rate = .3f;
-                    decamo.projectile.display = new Assets.Scripts.Utils.PrefabReference() { guidRef = "" };
+                    decamo.projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "" };
                     decamo.projectile.radius = 20;
                     plane.GetAttackModel(0).AddWeapon(decamo);
                 }

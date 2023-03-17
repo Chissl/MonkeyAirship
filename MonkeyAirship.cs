@@ -1,25 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Assets.Scripts.Models.Towers;
-using Assets.Scripts.Models.TowerSets;
+using Il2CppAssets.Scripts.Models.Towers;
+using Il2CppAssets.Scripts.Models.TowerSets;
 using BTD_Mod_Helper.Api.Enums;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Unity;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Attack;
+using Il2CppAssets.Scripts.Unity;
 using BTD_Mod_Helper.Api;
 using MonkeyAirship.Displays;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Simulation.Behaviors;
-using Assets.Scripts.Models.GenericBehaviors;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
+using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
+using Il2CppAssets.Scripts.Simulation.Behaviors;
+using Il2CppAssets.Scripts.Models.GenericBehaviors;
 
 namespace MonkeyAirship
 { 
     public class MonkeyAirship : ModTower
     {
-        public override string TowerSet => TowerSetType.Military;
+        public override TowerSet TowerSet => TowerSet.Military;
         public override string BaseTower => TowerType.MonkeyAce;
         public override int Cost => 910;
         public override int TopPathUpgrades => 5;

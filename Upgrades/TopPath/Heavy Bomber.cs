@@ -1,22 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Models.Behaviors;
-using Assets.Scripts.Models;
-using Assets.Scripts.Simulation.Behaviors;
-using Assets.Scripts.Models.GenericBehaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Simulation.Towers.Emissions;
-using MonkeyAirship.Upgrades.TopPath;
-using MonkeyAirship.Upgrades.MiddlePath;
-using MonkeyAirship.Upgrades.BottomPath;
-using MonkeyAirship.Displays;
+﻿
 
 namespace MonkeyAirship.Upgrades.TopPath
 {
@@ -67,7 +49,7 @@ namespace MonkeyAirship.Upgrades.TopPath
                     explosion.radius += 5;
                 }
 
-                bomb.projectile.GetBehavior<DisplayModel>().positionOffset += new Assets.Scripts.Simulation.SMath.Vector3(0, 0, 0);
+                bomb.projectile.GetBehavior<DisplayModel>().positionOffset += new Il2CppAssets.Scripts.Simulation.SMath.Vector3(0, 0, 0);
                 towerModel.AddBehavior(bombbehavior);
                 towerModel.GetBehavior<AirUnitModel>().display = CreatePrefabReference<Display400>();
                 

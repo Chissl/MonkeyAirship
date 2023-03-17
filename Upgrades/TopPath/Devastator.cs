@@ -1,23 +1,4 @@
-﻿using Assets.Scripts.Models.Towers;
-using BTD_Mod_Helper.Api.Towers;
-using BTD_Mod_Helper.Extensions;
-using Assets.Scripts.Unity;
-using Assets.Scripts.Models.Towers.Behaviors.Attack;
-using Assets.Scripts.Models.Towers.Projectiles.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons.Behaviors;
-using Assets.Scripts.Models.Behaviors;
-using Assets.Scripts.Models;
-using Assets.Scripts.Simulation.Behaviors;
-using Assets.Scripts.Models.GenericBehaviors;
-using Assets.Scripts.Models.Towers.Behaviors.Emissions;
-using Assets.Scripts.Models.Towers.Behaviors;
-using Assets.Scripts.Models.Towers.Weapons;
-using Assets.Scripts.Simulation.Towers.Emissions;
-using MonkeyAirship.Upgrades.TopPath;
-using MonkeyAirship.Upgrades.MiddlePath;
-using MonkeyAirship.Upgrades.BottomPath;
-using Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors;
-using MonkeyAirship.Displays;
+﻿
 
 namespace MonkeyAirship.Upgrades.TopPath
 {
@@ -40,7 +21,7 @@ namespace MonkeyAirship.Upgrades.TopPath
                 var bomb = bombbehavior.weapons[0];
                 bomb.projectile.AddBehavior(new DamageModel("dummy", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None));
                 bomb.projectile.GetDamageModel().CapDamage(0);
-                bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Assets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
+                bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
                 bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.scale = .6f;
                 
                 bomb.RemoveBehavior<CheckAirUnitOverTrackModel>();
