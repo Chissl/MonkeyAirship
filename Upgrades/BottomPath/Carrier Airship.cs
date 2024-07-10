@@ -20,7 +20,7 @@ namespace MonkeyAirship.Upgrades.BottomPath
                 var attackairunitmodel = towerModel.GetBehavior<AttackAirUnitModel>();
                 var firefromairunitmodel = attackairunitmodel.GetDescendant<FireFromAirUnitModel>();
                 var carrier = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-400").GetAttackModel(1).weapons[0].Duplicate();
-                var plane = Game.instance.model.GetTowerFromId("BuccaneerGreaterPlane").Duplicate();
+                var plane = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-500").GetDescendant<CreateTowerModel>().tower.Duplicate();
                 var strafe = plane.GetAttackModel(0).weapons[0];
                 var strafeprojectile = strafe.projectile;
                 var missile = plane.GetAttackModel(2).weapons[0];
@@ -49,7 +49,7 @@ namespace MonkeyAirship.Upgrades.BottomPath
                     var decamo = Game.instance.model.GetTower(TowerType.WizardMonkey, 0, 0, 3).GetWeapons()[1].Duplicate();
                     decamo.behaviors = new Il2CppReferenceArray<WeaponBehaviorModel>(new WeaponBehaviorModel[] { firefromlightplane });
                     decamo.rate = .3f;
-                    decamo.projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "" };
+                    decamo.projectile.display = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "" };
                     decamo.projectile.radius = 20;
                     plane.GetAttackModel(0).AddWeapon(decamo);
                 }

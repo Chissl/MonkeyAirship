@@ -18,7 +18,7 @@ namespace MonkeyAirship.Upgrades.TopPath
                 var bombbehavior = Game.instance.model.GetTowerFromId("MonkeyAce-030").GetAttackModel(1).Duplicate();
                 var attackairunitmodel = towerModel.GetBehavior<AttackAirUnitModel>();
                 var bomb = bombbehavior.weapons[0];
-                bomb.projectile.AddBehavior(new DamageModel("dummy", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None));
+                bomb.projectile.AddBehavior(new DamageModel("dummy", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None, false));
                 bomb.projectile.GetDamageModel().CapDamage(0);
                 bomb.RemoveBehavior<CheckAirUnitOverTrackModel>();
                 var emissionovertimemodel = Game.instance.model.GetTowerFromId("MonkeyAce-030").GetAttackModel(1).weapons[0].emission.Duplicate();

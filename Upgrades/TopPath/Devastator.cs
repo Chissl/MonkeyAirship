@@ -19,9 +19,9 @@ namespace MonkeyAirship.Upgrades.TopPath
                 var attackairunitmodel = towerModel.GetBehavior<AttackAirUnitModel>();
                 var mortar500 = Game.instance.model.GetTowerFromId("MortarMonkey-500").Duplicate();
                 var bomb = bombbehavior.weapons[0];
-                bomb.projectile.AddBehavior(new DamageModel("dummy", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None));
+                bomb.projectile.AddBehavior(new DamageModel("dummy", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None, false));
                 bomb.projectile.GetDamageModel().CapDamage(0);
-                bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
+                bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
                 bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.scale = .6f;
                 
                 bomb.RemoveBehavior<CheckAirUnitOverTrackModel>();
