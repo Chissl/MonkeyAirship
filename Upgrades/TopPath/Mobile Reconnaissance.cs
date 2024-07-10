@@ -20,9 +20,9 @@ namespace MonkeyAirship.Upgrades.TopPath
             var decamo = Game.instance.model.GetTower(TowerType.WizardMonkey, 0, 0, 3).GetAttackModel(1).Duplicate();
             decamo.weapons[0].behaviors = new Il2CppReferenceArray<WeaponBehaviorModel>(new WeaponBehaviorModel[] {firefromairunitmodel});
             decamo.weapons[0].rate = .6f;
-            decamo.weapons[0].projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "" };
+            decamo.weapons[0].projectile.display = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "" };
             decamo.weapons[0].projectile.radius = 50;
-            decamo.weapons[0].projectile.AddBehavior(new DamageModel("", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None));
+            decamo.weapons[0].projectile.AddBehavior(new DamageModel("", 0, 0, false, false, false, BloonProperties.None, BloonProperties.None, false));
             attackairunitmodel.AddBehavior(decamo);
             attackairunitmodel.addsToSharedGrid = true;
             towerModel.GetBehavior<AirUnitModel>().display = CreatePrefabReference<Display200>();

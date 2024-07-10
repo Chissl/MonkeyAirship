@@ -47,7 +47,7 @@ namespace MonkeyAirship.Upgrades
 
             balloflight.GetAttackModel().weapons[0].AddBehavior(new FireFromAirUnitModel("fire"));
             var balloflightweapon = balloflight.GetAttackModel().weapons[0];
-            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
+            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             balloflightweapon.projectile.GetDamageModel().damage = 24;
             balloflightweapon.projectile.AddBehavior(new DamageModifierForTagModel("boss", "Boss", 1, 20, false, true));
             balloflightweapon.projectile.CapPierce(999999);
@@ -107,7 +107,7 @@ namespace MonkeyAirship.Upgrades
             strongairunitmodel.weapons[10].ejectX = 0;
             strongairunitmodel.weapons[10].projectile.GetDamageModel().damage = 120;
             strongairunitmodel.weapons[10].projectile.AddBehavior(new DamageModifierForTagModel("boss", "Boss", 1, 100, false, true));
-            strongairunitmodel.weapons[10].GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
+            strongairunitmodel.weapons[10].GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
             strongairunitmodel.AddWeapon(strongairunitmodel.weapons[10]);
             strongairunitmodel.weapons[11].GetDescendant<LineProjectileEmissionModel>().useTargetAsEndPoint = false;
 
@@ -175,7 +175,7 @@ namespace MonkeyAirship.Upgrades
             var bombbehavior = Game.instance.model.GetTowerFromId("MonkeyAce-030").GetAttackModel(1).Duplicate();
             var mortar500 = Game.instance.model.GetTowerFromId("MortarMonkey-500").Duplicate();
             var bomb = bombbehavior.weapons[0];
-            bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
+            bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.assetId = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "b1324f2f4c3809643b7ef1d8c112442a" };
             bomb.projectile.GetBehavior<CreateEffectOnExhaustFractionModel>().effectModel.scale = .8f;
 
             bomb.RemoveBehavior<CheckAirUnitOverTrackModel>();
@@ -210,7 +210,7 @@ namespace MonkeyAirship.Upgrades
             towerModel.AddBehavior(bombbehavior);
 
             var carrier = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-400").GetAttackModel(1).weapons[0].Duplicate();
-            var plane = Game.instance.model.GetTowerFromId("BuccaneerGreaterPlane").Duplicate();
+            var plane = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-500").GetDescendant<CreateTowerModel>().tower.Duplicate();
             var strafe = plane.GetAttackModel(0).weapons[0];
             var strafeprojectile = strafe.projectile;
             var missile = plane.GetAttackModel(2).weapons[0];

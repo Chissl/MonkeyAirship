@@ -18,10 +18,10 @@ namespace MonkeyAirship.Upgrades.MiddlePath
             var lastairunitmodel = towerModel.GetBehavior<AttackAirUnitModel>().Duplicate();
             var centerlaserairunitmodel = strongairunitmodel.Duplicate();
             var closeairunitmodel = towerModel.GetBehaviors<AttackAirUnitModel>()[1];
-            towerModel.GetAttackModel(0).weapons[0].projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
+            towerModel.GetAttackModel(0).weapons[0].projectile.display = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
 
             var balloflight = Game.instance.model.GetTowerFromId("BallOfLightTower").Duplicate();
-            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
+            balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             balloflight.GetDescendant<LineProjectileEmissionModel>().dontUseTowerPosition = true;
             //balloflight.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Assets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             balloflight.GetAttackModel().weapons[0].AddBehavior(new FireFromAirUnitModel("fire"));

@@ -16,7 +16,7 @@
                 var attackairunitmodel = towerModel.GetBehavior<AttackAirUnitModel>();
                 var firefromairunitmodel = attackairunitmodel.GetDescendant<FireFromAirUnitModel>();
                 var carrier = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-400").GetAttackModel(1).weapons[0].Duplicate();
-                var plane = Game.instance.model.GetTowerFromId("BuccaneerGreaterPlane").Duplicate();
+                var plane = Game.instance.model.GetTowerFromId("MonkeyBuccaneer-500").GetDescendant<CreateTowerModel>().tower.Duplicate();
                 var strafe = plane.GetAttackModel(0).weapons[0];
                 var strafeprojectile = strafe.projectile;
                 var missile = plane.GetAttackModel(2).weapons[0];

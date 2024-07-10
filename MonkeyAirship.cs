@@ -14,6 +14,7 @@ using Il2CppAssets.Scripts.Models.Towers.Projectiles.Behaviors;
 using Il2CppAssets.Scripts.Models.Towers.Behaviors.Emissions;
 using Il2CppAssets.Scripts.Simulation.Behaviors;
 using Il2CppAssets.Scripts.Models.GenericBehaviors;
+using BTD_Mod_Helper;
 
 namespace MonkeyAirship
 { 
@@ -59,6 +60,6 @@ namespace MonkeyAirship
             return towerSet.First(model => model.towerId == TowerType.MonkeyAce).towerIndex + 1;
         }
         public override bool IsValidCrosspath(int[] tiers) =>
-           HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
+           ModHelper.HasMod("UltimateCrosspathing") ? true : base.IsValidCrosspath(tiers);
     }
 }

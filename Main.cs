@@ -25,9 +25,8 @@ namespace MonkeyAirship
 {
     public class Main : BloonsTD6Mod
     {
-        public override string GithubReleaseURL => "";
 
-       [HarmonyPatch(typeof(TowerManager), "UpgradeTower")]
+        [HarmonyPatch(typeof(TowerManager), "UpgradeTower")]
         internal class Tower_Initialise
         {
             [HarmonyPrefix]
@@ -43,13 +42,13 @@ namespace MonkeyAirship
       bool isParagon = false,
       bool leveledFromEndOfRoundXp = false)
             {
-                if(def.name == "Eradicator")
+                if (def.name == "Eradicator")
                 {
-                    if(tower.towerModel.tiers[0] == 5)
+                    if (tower.towerModel.tiers[0] == 5)
                     {
                         tower.SetTargetType(def.targetTypes[0]);
                     }
-                    else if(tower.towerModel.tiers[2] == 5)
+                    else if (tower.towerModel.tiers[2] == 5)
                     {
                         tower.towerModel = Game.instance.model.GetTowerFromId("MonkeySub-050");
                     }
@@ -64,7 +63,7 @@ namespace MonkeyAirship
 
             if (tower.towerModel.name == "Eradicator")
             {
-                var degree = tower.GetTowerBehavior<ParagonTower>().GetCurrentDegree();;
+                var degree = tower.GetTowerBehavior<ParagonTower>().GetCurrentDegree(); ;
                 foreach (var attackmodel in tower.towerModel.GetBehaviors<AttackAirUnitModel>())
                 {
                     foreach (var weapon in attackmodel.weapons)

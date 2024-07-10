@@ -63,13 +63,13 @@ namespace MonkeyAirship.Upgrades.MiddlePath
             var weaklaser = laserstrikeattack.Duplicate();
             var displaylaser = laserstrikeattack.Duplicate();
             displaylaser.GetDescendant<LineProjectileEmissionModel>().useTargetAsEndPoint = false;
-            weaklaser.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
+            weaklaser.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "d48587764ad63c84ea37e82f58bd05ad" };
             
             laserstrike.attacks[0].targetProvider = new TargetStrongAirUnitModel("", false, false);
             laserstrike.attacks[0].AddBehavior(new TargetStrongAirUnitModel("", false, false));
 
             laserstrikeattack.GetAttackModel().weapons[0].projectile.GetDamageModel().damage = 120;
-            laserstrikeattack.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
+            laserstrikeattack.GetDescendant<LineProjectileEmissionModel>().displayPath.assetPath = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "b9f3014db2da83f48b34e662e9a79910" };
             
             laserstrike.attacks[0].weapons[0] = laserstrikeattack.GetAttackModel().weapons[0].Duplicate();
             laserstrike.attacks[0].fireWithoutTarget = false;
@@ -88,7 +88,7 @@ namespace MonkeyAirship.Upgrades.MiddlePath
             foreach (var attackairunitmodel in towerModel.GetBehaviors<AttackAirUnitModel>())
             {
                 attackairunitmodel.range += 50;
-                attackairunitmodel.weapons[0].projectile.display = new Il2CppAssets.Scripts.Utils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
+                attackairunitmodel.weapons[0].projectile.display = new Il2CppNinjaKiwi.Common.ResourceUtils.PrefabReference() { guidRef = "6c11e1432d6321c44b216600b2cdbac6" };
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("ceramic", "Ceramic", 1, 3, false, true));
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("fortified", "Fortified", 1, 3, false, true));
                 attackairunitmodel.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("moabs", "Moabs", 1, 2, false, true));
